@@ -87,7 +87,7 @@ async function addPreview() {
         return;
     }
     let content;
-    let wikiPage = currentLink.href.split("netfree.link/support/wiki/")[1];
+    let wikiPage = currentLink.href.split("mywikidomain.com/wiki/")[1];
     if (!wikiPage) {
         console.warn(currentLink.href);
         return;
@@ -100,11 +100,11 @@ async function addPreview() {
     currentLink.title = ''; //remove html title
 
     try {
-        let res = await fetch(`https://netfree.link/support/wiki/api.php?action=parse&prop=text&formatversion=2&format=json&page=${wikiPage}`);
+        let res = await fetch(`https://mywikidomain.com/wiki/api.php?action=parse&prop=text&formatversion=2&format=json&page=${wikiPage}`);
         let json = await res.json();
         content = await json.parse.text;
     } catch (error) {
-        console.warn(`https://netfree.link/support/wiki/${wikiPage}`);
+        console.warn(`https://mywikidomain.com/wiki/${wikiPage}`);
         return;
     }
 
