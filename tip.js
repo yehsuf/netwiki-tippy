@@ -149,7 +149,7 @@ document.querySelectorAll('a[href^="/"]').forEach(link => {
 })
 
 if (tippy = "undefined") {
-    mw.loader.load('/support/wiki/index.php?title=מדיה_ויקי:Tippy.js&action=raw&ctype=text/javascript')
+    mw.loader.load('/wiki/index.php?title=מדיה_ויקי:Tippy.js&action=raw&ctype=text/javascript')
 }
 
 $('body').mouseleave(function() {
